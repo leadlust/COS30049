@@ -9,9 +9,8 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="bg-gradient-to-r from-purple-800/70 to-blue-900/70 backdrop-blur-lg text-white py-4 px-6 fixed w-full top-0 z-50 opacity-100 border-b 0.5px border-gray-500/40">
+    <nav className="bg-gradient-to-r from-purple-800/70 to-blue-900/70 backdrop-blur-lg text-white py-4 px-6 fixed w-full top-0 z-50 opacity-100 border-b border-gray-500/40">
       <div className="container mx-auto flex items-center justify-between">
-        
         <Link href="/" className="flex items-center flex-1">
           <Image 
             src="/assets/logo.png" 
@@ -23,20 +22,25 @@ export default function Navbar() {
           <span className="text-xl font-bold">ChainSwitch</span>
         </Link>
         <div className="hidden md:flex space-x-8 flex-grow justify-center">
-          {["Home", "Features", "Contact", "About Us"].map((item) => {
-            const link = item.toLowerCase();
-            const isActive = pathname === `/${link === "home" ? "" : link}`;
+          {[
+            { name: "Home", path: "/" },
+            { name: "Features", path: "/features" },
+            { name: "Contact", path: "/contact" },
+            { name: "About Us", path: "/aboutus" }
+          ].map(({ name, path }) => {
+            const isActive = pathname === path;
+
             return (
               <Link
-                key={item}
-                href={`/${link === "home" ? "" : link}`}
-                className={`relative pb-2 transition ${
-                  isActive ? "text-blue-400 font-semibold" : "hover:text-gray-300"
+                key={name}
+                href={path}
+                className={`relative pb-2 transition-colors duration-300 group ${
+                  isActive ? "text-blue-400 font-semibold" : "text-white hover:text-blue-300"
                 }`}
               >
-                {item}
+                {name}
                 <span
-                  className={`absolute left-0 bottom-0 w-full h-[2px] bg-blue-400 transition-transform ${
+                  className={`absolute left-0 bottom-0 w-full h-[2px] bg-blue-400 transition-transform duration-300 transform ${
                     isActive ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100"
                   }`}
                 />
@@ -44,16 +48,10 @@ export default function Navbar() {
             );
           })}
         </div>
+
         <div className="flex items-center space-x-4 flex-1 justify-end">
-          <Button variant="ghost" asChild className="text-white hover:text-gray-900">
-            <Link href="/login">Login</Link>
-          </Button>
-          <Button
-            variant="outline"
-            asChild
-            className="bg-transparent text-white hover:bg-white hover:text-gray-900"
-          >
-            <Link href="/signup">Sign Up</Link>
+          <Button variant="ghost" asChild className="text-white transition-colors duration-300 hover:text-blue-300">
+            <Link href="/accessibility">Accessibility</Link>
           </Button>
         </div>
 

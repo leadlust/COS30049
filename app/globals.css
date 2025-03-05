@@ -77,9 +77,17 @@
   }
 }
 
-.bg-homepage {
-  background-image: url('/assets/bg.jpg');
+.custom-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/bg.jpg'); /* Update the path if needed */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed; /* Optional: keeps the bg fixed when scrolling */
+  z-index: -1; /* Ensures the background stays behind the content */
 }
+

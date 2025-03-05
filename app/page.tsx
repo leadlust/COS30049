@@ -18,6 +18,7 @@ export default function Home() {
   }
 
   return (
+  <div className="relative min-h-screen bg-[url('/assets/bg.jpg')] bg-cover bg-center bg-no-repeat bg-fixed">
     <div className="relative w-full min-h-screen flex items-center justify-center px-4 bg-homepage">
       <div className="text-center max-w-4xl mx-auto flex flex-col items-center justify-center gap-8">
         <h1 className="text-4xl md:text-5xl font-extrabold text-white leading-tight">
@@ -56,5 +57,6 @@ export default function Home() {
         </AnimatePresence>
       </div>
     </div>
+  </div> 
   )
 }
