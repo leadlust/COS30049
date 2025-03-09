@@ -1,15 +1,16 @@
 import type React from "react"
-import "./globals.css"
-import type { Metadata } from "next"
+import "@/styles/globals.css"
 import { Inter } from "next/font/google"
-import Navbar from "./components/Navbar"
-import Footer from "./components/Footer"
+import type { Metadata } from "next"
+import { ThemeProvider } from "@/components/theme-provider"
 
 const inter = Inter({ subsets: ["latin"] })
 
+// Update the metadata to reflect the new purpose of the site
 export const metadata: Metadata = {
-  title: "Blockchain Transaction Explorer with ChainSwitch",
-  description: "Visualize and explore blockchain transaction data",
+  title: "CryptoTrack - Cryptocurrency Price Conversion & Portfolio Tracking",
+  description:
+    "Track cryptocurrency prices, convert between coins and fiat currencies, and manage your portfolio all in one place.",
 }
 
 export default function RootLayout({
@@ -18,11 +19,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} flex flex-col min-h-screen bg-black`}>
-        <Navbar />
-        <main className="flex-grow pt-16">{children}</main>
-        <Footer />
+    <html lang="en" suppressHydrationWarning>
+      <body className={inter.className}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )
