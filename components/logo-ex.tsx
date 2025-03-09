@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { CustomLogo } from "./custom-logo"
 
 export default function LogoExamples() {

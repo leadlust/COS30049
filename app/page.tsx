@@ -1,4 +1,5 @@
 "use client"
+/* eslint-disable react/no-unescaped-entities */
 
 import type React from "react"
 
@@ -6,7 +7,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { Check, ChevronRight, Menu, X, Moon, Sun, ArrowRight, Zap, Shield, BarChart, Layers } from "lucide-react"
+import { Check, Menu, X, Moon, Sun, ArrowRight, Zap, Shield, BarChart, Layers } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Badge } from "@/components/ui/badge"
