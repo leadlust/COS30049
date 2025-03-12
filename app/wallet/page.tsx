@@ -43,12 +43,6 @@ export default function Dashboard() {
     show: { y: 0, opacity: 1, transition: { type: "spring", stiffness: 300, damping: 24 } },
   }
 
-  const shimmer = {
-    initial: { opacity: 0.3 },
-    animate: { opacity: 1 },
-    transition: { repeat: Number.POSITIVE_INFINITY, repeatType: "reverse", duration: 1.5 },
-  }
-
   return (
     <div
       className={`min-h-screen ${isDarkMode ? "bg-black text-white" : "bg-white text-black"}`}
