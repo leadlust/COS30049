@@ -210,13 +210,14 @@ export default function LandingPage() {
                 </p>
                 <div className="flex flex-col gap-4 mt-4 w-full max-w-md mx-auto">
                   <Input type="text" placeholder="Enter your wallet address" className="rounded-full h-12" />
-                  <Button
-                    size="lg"
-                    className="rounded-full h-12 px-8 text-base bg-cyan-400 hover:bg-cyan-500 dark:bg-red-400 dark:hover:bg-red-500 text-black dark:text-white"
-                  >
-                    Start Now
-                    <ArrowRight className="ml-2 size-4" />
-                  </Button>
+                  <Link href="/wallet">
+                    <Button
+                      size="lg"
+                      className="rounded-full h-12 px-8 text-base bg-cyan-400 hover:bg-cyan-500 dark:bg-red-400 dark:hover:bg-red-500 text-black dark:text-white"
+                     > Start Now
+                      <ArrowRight className="ml-2 size-4" />
+                    </Button>
+                  </Link>
                 </div>
               </motion.div>
             </div>
@@ -808,7 +809,7 @@ export default function LandingPage() {
             bgColor="bg-gradient-to-br from-red-400 to-red-300"
             />
               <p className="text-sm text-muted-foreground">
-                Track cryptocurrency prices, convert between coins and fiat currencies, and manage your portfolio all in
+                Track cryptocurrency prices, convert between coins and fiat currencies, and checking your wallet transactions, all in
                 one place.
               </p>
               <div className="flex gap-4">

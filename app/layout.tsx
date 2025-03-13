@@ -6,7 +6,6 @@ import { ThemeProvider } from "@/components/theme-provider"
 
 const inter = Inter({ subsets: ["latin"] })
 
-// Update the metadata to reflect the new purpose of the site
 export const metadata: Metadata = {
   title: "CryptoTrack - Cryptocurrency Price Conversion & Portfolio Tracking",
   description:
