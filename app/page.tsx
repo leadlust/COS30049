@@ -78,7 +78,6 @@ function FloatingPaths({ position }: { position: number }) {
 }
 
 function BackgroundPaths({
-  title = "Background Paths",
 }: {
   title?: string
 }) {
