@@ -82,7 +82,6 @@ function BackgroundPaths({
 }: {
   title?: string
 }) {
-  const words = title.split(" ")
 
   return (
     <div className="absolute inset-0 pointer-events-none">
