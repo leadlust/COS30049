@@ -95,6 +95,7 @@ export default function LandingPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
+  const [key, setKey] = useState(Math.random())
 
   useEffect(() => {
     setMounted(true)
@@ -179,24 +180,28 @@ export default function LandingPage() {
             <Link
               href="#features"
               className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              onClick={() => setKey(Math.random())}
             >
               Features
             </Link>
             <Link
               href="#price-conversion"
               className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              onClick={() => setKey(Math.random())}
             >
               Price Conversion
             </Link>
             <Link
               href="#about"
               className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              onClick={() => setKey(Math.random())}
             >
               About
             </Link>
             <Link
               href="#faq"
               className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              onClick={() => setKey(Math.random())}
             >
               FAQ
             </Link>
@@ -247,7 +252,7 @@ export default function LandingPage() {
           </motion.div>
         )}
       </header>
-      <main className="flex-1">
+      <main className="flex-1" key={key}>
         <CustomBackground>
           <BackgroundPaths />
           <section className="w-full py-20 md:py-32 lg:py-40 overflow-hidden">
