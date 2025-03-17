@@ -630,6 +630,38 @@ export default function LandingPage() {
                     </div>
                   </div>
                 </div>
+                <p className="text-gray-400">
+                  The members of our team are passionate about blockchain technology and its potential to revolutionize:
+                </p>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="size-8 rounded-full bg-yellow-400/10 flex items-center justify-center text-yellow-500 mt-1">
+                      *
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-white">Le Duc Duy</h4>
+                      <p className="text-sm text-gray-400">104992949</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="size-8 rounded-full bg-yellow-400/10 flex items-center justify-center text-yellow-500 mt-1">
+                      *
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-white">Nguyen Tuan Khanh</h4>
+                      <p className="text-sm text-gray-400">104993081</p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="size-8 rounded-full bg-yellow-400/10 flex items-center justify-center text-yellow-500 mt-1">
+                      *
+                    </div>
+                    <div>
+                      <h4 className="font-medium text-white">Nguyen Minh Dang</h4>
+                      <p className="text-sm text-gray-400">104993942</p>
+                    </div>
+                  </div>
+                </div>
               </motion.div>
             </div>
           </div>
